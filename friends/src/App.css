@@ -37,8 +37,8 @@ nav a {
   display: inline-block;
 }
 
-nav .active{
-  /* background-color: #0099FF; */
+.friend-profile div{
+  margin: 0 auto;
 }
 
 .friend-list-container{

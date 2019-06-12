@@ -38,7 +38,7 @@ state = {
     }
 
     return (
-      <div className="save-wrapper">
+      <div className="friend-profile">
         <FriendCard friend={friend} />
       </div>  
     );

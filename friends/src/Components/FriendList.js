@@ -16,7 +16,6 @@ const FriendList = props => {
         <Container maxWidth="md">
             <Title title={'Friends'} />
             <Grid container className='friend-list' spacing={4}>
-            {/* <div className='friend-list'> */}
                 {props.friends.map(f => (
                     <Link to={`/friend/${f.id}`} style={linkStyle}>
                         <FriendCard key={f.id} friend={f} />
