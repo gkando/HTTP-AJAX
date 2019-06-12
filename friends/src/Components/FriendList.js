@@ -13,8 +13,8 @@ const FriendList = props => {
         paddingBottom: '3rem',
       };
     return(
-        <Container maxWidth="md">
-            <Title title={'Friends'} />
+        <>
+             <Title title={'Friends'} />
             <Grid container className='friend-list' spacing={4}>
                 {props.friends.map(f => (
                     <Link to={`/friend/${f.id}`} style={linkStyle}>
@@ -22,8 +22,8 @@ const FriendList = props => {
                     </Link>
                 ))}
             </Grid>
-            </Container>
-    )
+            </>
+                )
 }
 
 export default FriendList

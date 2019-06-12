@@ -21,7 +21,6 @@ class NewFriendForm extends React.Component {
       componentDidMount() {
         // change this line to grab the id passed on the URL
         const flag = this.props.location.flag
-        console.log(this.props)
         if (flag == 'update'  || flag == 'delete'){this.setState(
             {newData: {
                 name: this.props.location.name, 
@@ -108,7 +107,6 @@ class NewFriendForm extends React.Component {
                 [e.target.name]: e.target.value
             }
         })
-        console.log(this.state.newData)
     }
 
     render() {

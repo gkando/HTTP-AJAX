@@ -5,6 +5,7 @@ import Friend from './Components/Friend'
 import NewFriendForm from './Components/NewFriendForm'
 import NavBar from './Components/NavBar'
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
+import Container from '@material-ui/core/Container';
 import axios from 'axios';
 
 export default class App extends Component {
@@ -30,12 +31,14 @@ export default class App extends Component {
       <Router className='App'>
         <div className='friend-list-container'>
           <NavBar  />
-          <Route exact path='/' render={props => <FriendList friends={friends} />} />
-          <Route exact path='/friend/:id' render={(props) => {
-            return (<Friend {...props} friends={friends} />)
-          }} />
-          {/* <Route path="/newFriend"  component={NewFriendForm} /> */}
-         <Route exact path="/:id" component={NewFriendForm} />
+          <Container maxWidth="md">
+            <Route exact path='/' render={props => <FriendList friends={friends} />} />
+            <Route exact path='/friend/:id' render={(props) => {
+              return (<Friend {...props} friends={friends} />)
+            }} />
+            {/* <Route path="/newFriend"  component={NewFriendForm} /> */}
+          <Route exact path="/:id" component={NewFriendForm} />
+         </Container>
         </div>
       </Router>
   )}
