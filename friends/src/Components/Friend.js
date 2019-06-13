@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import FriendCard from './FriendCard';
-import { Link } from 'react-router-dom'
-
 
 export default class Friend extends Component {
 state = {
@@ -9,17 +7,13 @@ state = {
     };
 
   componentDidMount() {
-    // change this line to grab the id passed on the URL
-    const id = this.props.match.params.id;
+    const id = parseInt(this.props.match.params.id);
     const friends = this.props.friends;
-
     this.fetchFriend(id, friends);
   }
 
   fetchFriend = (id, friends) => {
-    // this.setState({friend: friends.filter(e => { return e.id == id})})
-    this.setState({friend: friends.find(e => { return e.id == id})})
-
+    this.setState({friend: friends.find(e => { return e.id === id})})
     };
 
   componentWillReceiveProps(newProps){

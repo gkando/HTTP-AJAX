@@ -17,6 +17,10 @@ html {
   font-family: 'PT Sans', sans-serif;
 }
 
+.container{
+  min-height: 40vh;
+}
+
 nav{
   display: flex;
   justify-content: space-evenly;
@@ -36,9 +40,14 @@ nav a {
   /* padding: 20px; */
   display: inline-block;
 }
-
+.friend-profile{
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+}
 .friend-profile div{
   margin: 0 auto;
+
 }
 
 .friend-list-container{
@@ -63,6 +72,9 @@ nav a {
   font-size: 4rem;
   color: #16519f;
   text-align: center;
+  padding-bottom: 14px;
+  padding-top: 14px;
+
 }
 
 .friend-card{
